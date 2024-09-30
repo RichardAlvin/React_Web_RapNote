@@ -6,9 +6,11 @@ import NoteCardFooter from './NoteCardFooter';
 function NoteItem({ id, title, body, createdAt, archived, onDelete, onArchive }) {
  return (
    <div className="note-item note-item__content">
-     <NoteCardHeader title={title} createdAt={createdAt} />
-     <NoteCardBody body={body} />
-     <NoteCardFooter id={id} archived={archived} onDelete={onDelete} onArchive={onArchive}/>
+      <div>
+        <NoteCardHeader title={title} createdAt={createdAt} />
+        <NoteCardBody body={body} />
+      </div>
+      <NoteCardFooter id={id} archived={archived} onDelete={onDelete} onArchive={onArchive}/>
    </div>
  );
 }

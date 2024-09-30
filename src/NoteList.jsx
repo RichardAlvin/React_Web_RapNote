@@ -5,9 +5,9 @@ function NoteList({ notes, onDelete, onArchive }) {
     const activeNotes = notes.filter((note) => note.archived === false);
 
     return (
-        <>
+        <div className="note-list-div">
             <h2>Active Note</h2>
-            <div className="notes-list">
+            <div className="notes-list note-list-active-div">
             {
                 activeNotes.length > 0 ? (
                     activeNotes.map((note) => (
@@ -22,7 +22,7 @@ function NoteList({ notes, onDelete, onArchive }) {
                 )
             }
             </div>
-        </>
+        </div>
     );
 }
  

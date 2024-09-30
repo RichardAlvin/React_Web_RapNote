@@ -65,9 +65,11 @@ class NoteApp extends React.Component {
         <div className="note-app">
                 <NoteHeader />
                 <div className="note-app__body">
-                    <NoteInput addNote={this.onAddNoteHandler}/>
+                    <div className="note-app__row">
+                        <NoteInput addNote={this.onAddNoteHandler}/>
+                        <NoteArchiveList notes={this.state.notes} onDelete={this.onDeleteNoteHandler} onArchive={this.onPindahkanNoteHandler}/>
+                    </div>
                     <NoteList notes={this.state.notes} onDelete={this.onDeleteNoteHandler} onArchive={this.onArchiveNoteHandler}/>
-                    <NoteArchiveList notes={this.state.notes} onDelete={this.onDeleteNoteHandler} onArchive={this.onPindahkanNoteHandler}/>
                 </div>
         </div>
         );
